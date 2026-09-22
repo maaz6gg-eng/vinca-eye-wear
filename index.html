@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinca Eye Wear | Precision Vision. Uncompromised Style.</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: {
+                            DEFAULT: '#0F172A',
+                            light: '#1E293B',
+                            dark: '#080D1A'
+                        },
+                        champagne: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#B89420',
+                            accent: '#E2C044'
+                        },
+                        pearl: {
+                            DEFAULT: '#F8FAFC',
+                            muted: '#F1F5F9',
+                            dark: '#E2E8F0'
+                        },
+                        emerald: {
+                            accent: '#059669'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(15, 23, 42, 0.08)',
+                        'champagne-glow': '0 0 25px rgba(212, 175, 55, 0.25)',
+                        'card-hover': '0 20px 40px -15px rgba(15, 23, 42, 0.12)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glass-header {
+            background: rgba(248, 250, 252, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #0F172A 0%, #D4AF37 50%, #0F172A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-glow:hover {
+            border-color: #D4AF37;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F8FAFC;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="font-sans bg-pearl text-obsidian overflow-x-hidden">
+
+    <div class="bg-obsidian text-pearl-muted text-xs py-2.5 px-4 font-medium border-b border-champagne/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="hidden sm:flex items-center space-x-6">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-truck-fast text-champagne"></i> Free Shipping Worldwide</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-champagne"></i> 100% Prescription Accuracy Guarantee</span>
+            </div>
+            <div class="flex items-center justify-between w-full sm:w-auto space-x-6">
+                <span class="text-champagne-light font-semibold animate-pulse"><i class="fa-solid fa-location-dot mr-1"></i> Visit In-Store POS & Lab</span>
+                <button onclick="toggleAppointmentModal()" class="text-xs text-pearl hover:text-champagne transition-colors underline underline-offset-4">Book Eye Exam</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-40 glass-header transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="group flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-obsidian text-champagne flex items-center justify-center font-serif font-bold text-xl shadow-md group-hover:scale-105 transition-transform duration-300 border border-champagne/30">
+                            V
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif text-2xl font-bold tracking-tight text-obsidian group-hover:text-champagne transition-colors">VINCA</span>
+                            <span class="text-[9px] tracking-[0.25em] text-champagne-dark font-semibold uppercase -mt-1">EYE WEAR</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#eyeglasses" class="text-sm font-medium text-obsidian hover:text-champagne transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-champagne hover:after:w-full after:transition-all">Eyeglasses</a>
+                    <a href="#sunglasses" class="text-sm font-medium text-obsidian hover:text-champagne transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-champagne hover:after:w-full after:transition-all">Sunglasses</a>
+                    <a href="#prescription-guide" class="text-sm font-medium text-obsidian hover:text-champagne transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-champagne hover:after:w-full after:transition-all">Prescription Guide</a>
+                    <a href="#pos-store" class="text-sm font-medium text-obsidian hover:text-champagne transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-champagne hover:after:w-full after:transition-all">In-Store POS</a>
+                    <a href="#about" class="text-sm font-medium text-obsidian hover:text-champagne transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-champagne hover:after:w-full after:transition-all">Our Craft</a>
+                </nav>
+
+                <!-- Search & Actions -->
+                <div class="flex items-center space-x-5">
+                    <div class="relative hidden sm:block">
+                        <input type="text" placeholder="Search frames, lenses..." class="bg-pearl-muted text-obsidian text-xs rounded-full py-2.5 pl-9 pr-4 w-48 focus:w-64 focus:outline-none focus:ring-1 focus:ring-champagne transition-all duration-300 border border-slate-200">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400 text-xs"></i>
+                    </div>
+
+                    <button class="text-obsidian hover:text-champagne transition-colors relative p-1">
+                        <i class="fa-regular fa-heart text-lg"></i>
+                        <span class="absolute -top-1 -right-1 bg-champagne text-obsidian text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">2</span>
+                    </button>
+
+                    <button onclick="toggleCartDrawer()" class="text-obsidian hover:text-champagne transition-colors relative p-1 flex items-center gap-2">
+                        <i class="fa-solid fa-bag-shopping text-lg"></i>
+                        <span class="bg-obsidian text-champagne text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center border border-champagne/30" id="cartCount">1</span>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-obsidian text-xl p-2 focus:outline-none">
+                        <i class="fa-solid fa-bars" id="menuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-pearl border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#eyeglasses" class="block text-base font-medium text-obsidian py-2">Eyeglasses</a>
+            <a href="#sunglasses" class="block text-base font-medium text-obsidian py-2">Sunglasses</a>
+            <a href="#prescription-guide" class="block text-base font-medium text-obsidian py-2">Prescription Guide</a>
+            <a href="#pos-store" class="block text-base font-medium text-obsidian py-2">In-Store POS</a>
+            <a href="#about" class="block text-base font-medium text-obsidian py-2">Our Craft</a>
+            <div class="pt-4 border-t border-slate-200 flex flex-col gap-2">
+                <button onclick="toggleAppointmentModal()" class="w-full bg-obsidian text-pearl py-2.5 rounded-xl text-sm font-semibold">Book Eye Exam</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative min-h-[88vh] flex items-center pt-8 pb-16 overflow-hidden bg-gradient-to-b from-pearl via-pearl-muted to-pearl">
+        <!-- Background Decorative Elements -->
+        <div class="absolute top-10 right-0 w-96 h-96 bg-champagne/10 rounded-full filter blur-3xl -z-10"></div>
+        <div class="absolute bottom-0 left-10 w-80 h-80 bg-obsidian/5 rounded-full filter blur-2xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Content (7 Cols) -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-white/80 border border-champagne/40 px-4 py-1.5 rounded-full text-xs font-semibold text-obsidian shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-emerald-accent animate-ping"></span>
+                        <span class="text-champagne-dark">2026 Titanium Collection</span>
+                        <span class="text-slate-300">|</span>
+                        <span>Japanese Handcrafted</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-obsidian leading-[1.1] tracking-tight">
+                        Precision Vision. <br>
+                        <span class="font-serif italic font-normal text-champagne-dark">Uncompromised</span> Style.
+                    </h1>
+
+                    <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Elevate your everyday clarity with Italian cellulose acetate and ultra-light Japanese titanium frames. Engineered for flawless optical precision and tailored fitting.
+                    </p>
+
+                    <!-- Features Pills -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-semibold text-obsidian">
+                        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl shadow-sm border border-slate-200">
+                            <i class="fa-solid fa-check text-emerald-accent"></i> 100% Prescription Accuracy
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl shadow-sm border border-slate-200">
+                            <i class="fa-solid fa-sun text-champagne"></i> Anti-Glare & Blue Light Shield
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-xl shadow-sm border border-slate-200">
+                            <i class="fa-solid fa-arrows-to-eye text-obsidian"></i> In-Store Custom Fitting
+                        </div>
+                    </div>
+
+                    <!-- Dual CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#eyeglasses" class="w-full sm:w-auto bg-obsidian text-pearl hover:bg-obsidian-light px-8 py-4 rounded-xl font-semibold text-sm transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-3 group">
+                            <span>Explore Collection</span>
+                            <i class="fa-solid fa-arrow-right text-xs text-champagne group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <button onclick="toggleAppointmentModal()" class="w-full sm:w-auto bg-white border border-champagne text-obsidian hover:bg-champagne-light/20 px-8 py-4 rounded-xl font-semibold text-sm transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calendar-check text-champagne-dark"></i>
+                            <span>Book In-Store Fitting</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Interactive Prescription Preview Card (5 Cols) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        
+                        <!-- Main Visual Frame Box -->
+                        <div class="relative bg-white rounded-3xl p-6 shadow-2xl border border-slate-100 overflow-hidden group">
+                            <div class="absolute top-4 right-4 bg-champagne/10 text-champagne-dark text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                Best Seller
+                            </div>
+                            
+                            <!-- Frame Image SVG Graphic -->
+                            <div class="h-64 flex items-center justify-center relative my-4">
+                                <svg class="w-full h-full text-obsidian group-hover:scale-105 transition-transform duration-500" viewBox="0 0 500 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Glasses Bridge -->
+                                    <path d="M220 90 Q250 75 280 90" stroke="#D4AF37" stroke-width="6" stroke-linecap="round" fill="none"/>
+                                    <!-- Left Frame Outer -->
+                                    <rect x="50" y="50" width="160" height="110" rx="35" stroke="#0F172A" stroke-width="12" fill="none"/>
+                                    <rect x="58" y="58" width="144" height="94" rx="28" stroke="#D4AF37" stroke-width="2" fill="rgba(243, 229, 171, 0.15)"/>
+                                    <!-- Right Frame Outer -->
+                                    <rect x="290" y="50" width="160" height="110" rx="35" stroke="#0F172A" stroke-width="12" fill="none"/>
+                                    <rect x="298" y="58" width="144" height="94" rx="28" stroke="#D4AF37" stroke-width="2" fill="rgba(243, 229, 171, 0.15)"/>
+                                    <!-- Temples -->
+                                    <path d="M50 80 L10 70" stroke="#0F172A" stroke-width="8" stroke-linecap="round"/>
+                                    <path d="M450 80 L490 70" stroke="#0F172A" stroke-width="8" stroke-linecap="round"/>
+                                    <!-- Reflection Glare -->
+                                    <path d="M70 70 L110 130" stroke="white" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+                                    <path d="M310 70 L350 130" stroke="white" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+                                </svg>
+                            </div>
+
+                            <div class="flex justify-between items-end pt-2 border-t border-slate-100">
+                                <div>
+                                    <h3 class="font-serif text-xl font-bold text-obsidian">Aurelius Titanium</h3>
+                                    <p class="text-xs text-slate-500">Gold Accent / Obsidian Black</p>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-xs text-slate-400 line-through">$280</span>
+                                    <p class="text-lg font-bold text-obsidian">$220</p>
+                                </div>
+                            </div>
+
+                            <!-- Interactive Prescription Quick-Builder Widget inside Hero -->
+                            <div class="mt-4 bg-pearl-muted p-3.5 rounded-2xl border border-slate-200 text-xs">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-bold text-obsidian"><i class="fa-solid fa-sliders text-champagne mr-1"></i> Interactive Lens Builder</span>
+                                    <span class="text-[10px] text-emerald-accent font-semibold"><i class="fa-solid fa-circle text-[8px]"></i> Real-time Sync</span>
+                                </div>
+                                <div class="grid grid-cols-2 gap-2 mb-3">
+                                    <select id="heroLensType" onchange="updateHeroPrice()" class="bg-white border border-slate-200 rounded-lg p-2 font-medium text-obsidian text-[11px] focus:outline-none focus:border-champagne">
+                                        <option value="0">Single Vision (Included)</option>
+                                        <option value="40">Progressive (+ $40)</option>
+                                        <option value="25">Blue Light Filter (+ $25)</option>
+                                    </select>
+                                    <select id="heroCoat" onchange="updateHeroPrice()" class="bg-white border border-slate-200 rounded-lg p-2 font-medium text-obsidian text-[11px] focus:outline-none focus:border-champagne">
+                                        <option value="0">Anti-Reflective (+ $0)</option>
+                                        <option value="30">Photochromic (+ $30)</option>
+                                    </select>
+                                </div>
+                                <button onclick="quickAddHeroFrame()" class="w-full bg-champagne hover:bg-champagne-dark text-obsidian font-bold py-2.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-cart-plus"></i> Add Frame with Prescriptions
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <span class="text-xs font-bold text-champagne-dark uppercase tracking-widest">Collections</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-obsidian mt-1">Curated Optical Styles</h2>
+                </div>
+                <a href="#eyeglasses" class="mt-4 md:mt-0 text-sm font-semibold text-obsidian hover:text-champagne transition-colors flex items-center gap-2">
+                    View All Categories <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+                
+                <!-- Category 1 -->
+                <a href="#eyeglasses" class="group relative rounded-2xl overflow-hidden bg-pearl-muted p-6 text-center hover:shadow-card-hover transition-all duration-300 border border-slate-100 flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-glasses text-2xl text-obsidian group-hover:text-champagne"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-obsidian text-base group-hover:text-champagne transition-colors">Men's Optical</h3>
+                    <p class="text-xs text-slate-500 mt-1">84 Models</p>
+                </a>
+
+                <!-- Category 2 -->
+                <a href="#eyeglasses" class="group relative rounded-2xl overflow-hidden bg-pearl-muted p-6 text-center hover:shadow-card-hover transition-all duration-300 border border-slate-100 flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-eye text-2xl text-obsidian group-hover:text-champagne"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-obsidian text-base group-hover:text-champagne transition-colors">Women's Eyewear</h3>
+                    <p class="text-xs text-slate-500 mt-1">112 Models</p>
+                </a>
+
+                <!-- Category 3 -->
+                <a href="#sunglasses" class="group relative rounded-2xl overflow-hidden bg-pearl-muted p-6 text-center hover:shadow-card-hover transition-all duration-300 border border-slate-100 flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-sun text-2xl text-obsidian group-hover:text-champagne"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-obsidian text-base group-hover:text-champagne transition-colors">Sunglasses</h3>
+                    <p class="text-xs text-slate-500 mt-1">65 Models</p>
+                </a>
+
+                <!-- Category 4 -->
+                <a href="#eyeglasses" class="group relative rounded-2xl overflow-hidden bg-pearl-muted p-6 text-center hover:shadow-card-hover transition-all duration-300 border border-slate-100 flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-laptop text-2xl text-obsidian group-hover:text-champagne"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-obsidian text-base group-hover:text-champagne transition-colors">Blue Light Shield</h3>
+                    <p class="text-xs text-slate-500 mt-1">40 Models</p>
+                </a>
+
+                <!-- Category 5 -->
+                <a href="#eyeglasses" class="group relative rounded-2xl overflow-hidden bg-pearl-muted p-6 text-center hover:shadow-card-hover transition-all duration-300 border border-slate-100 flex flex-col items-center col-span-2 md:col-span-1">
+                    <div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-gem text-2xl text-obsidian group-hover:text-champagne"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-obsidian text-base group-hover:text-champagne transition-colors">Titanium Luxury</h3>
+                    <p class="text-xs text-slate-500 mt-1">28 Models</p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="eyeglasses" class="py-20 bg-pearl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold text-champagne-dark uppercase tracking-widest">Handcrafted Perfection</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-obsidian mt-2">Featured Optical Frames</h2>
+                <p class="text-slate-500 text-sm mt-2">All frames include anti-scratch coating and customizable optical lens options.</p>
+                
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-8">
+                    <button onclick="filterFrames('all')" class="filter-btn active bg-obsidian text-pearl px-5 py-2 rounded-full text-xs font-semibold shadow-sm transition-all">All Frames</button>
+                    <button onclick="filterFrames('optical')" class="filter-btn bg-white border border-slate-200 text-obsidian hover:border-champagne px-5 py-2 rounded-full text-xs font-semibold transition-all">Optical Glasses</button>
+                    <button onclick="filterFrames('sunglasses')" class="filter-btn bg-white border border-slate-200 text-obsidian hover:border-champagne px-5 py-2 rounded-full text-xs font-semibold transition-all">Sunglasses</button>
+                    <button onclick="filterFrames('titanium')" class="filter-btn bg-white border border-slate-200 text-obsidian hover:border-champagne px-5 py-2 rounded-full text-xs font-semibold transition-all">Titanium Edition</button>
+                </div>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="productGrid">
+                
+                <!-- Product Card 1 -->
+                <div class="product-card frame-optical frame-titanium bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div class="relative p-6 bg-pearl-muted flex items-center justify-center h-56 overflow-hidden">
+                        <span class="absolute top-3 left-3 bg-obsidian text-champagne text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Titanium</span>
+                        <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-slate-400 hover:text-red-500 flex items-center justify-center transition-colors">
+                            <i class="fa-regular fa-heart text-xs"></i>
+                        </button>
+                        <svg class="w-48 h-32 text-obsidian group-hover:scale-110 transition-transform duration-500" viewBox="0 0 500 220" fill="none">
+                            <path d="M220 90 Q250 80 280 90" stroke="#D4AF37" stroke-width="5" fill="none"/>
+                            <rect x="60" y="55" width="150" height="100" rx="30" stroke="#0F172A" stroke-width="10" fill="none"/>
+                            <rect x="290" y="55" width="150" height="100" rx="30" stroke="#0F172A" stroke-width="10" fill="none"/>
+                            <path d="M60 80 L20 70" stroke="#D4AF37" stroke-width="6"/>
+                            <path d="M440 80 L480 70" stroke="#D4AF37" stroke-width="6"/>
+                        </svg>
+                        <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button onclick="openPrescriptionModal('Vinca Vantage Titanium', 240)" class="bg-obsidian hover:bg-champagne text-pearl hover:text-obsidian text-xs font-semibold px-4 py-2 rounded-lg transition-colors shadow-md flex items-center gap-1.5">
+                                <i class="fa-solid fa-file-medical text-[10px]"></i> Add Prescription
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-1 text-champagne text-xs mb-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-slate-400 text-[10px] ml-1">(38)</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-obsidian text-lg">Vinca Vantage</h3>
+                        <p class="text-xs text-slate-500 mt-0.5">Ultra-light Square Acetate</p>
+                        
+                        <!-- Color Swatches -->
+                        <div class="flex items-center gap-2 my-3">
+                            <span class="w-3.5 h-3.5 rounded-full bg-obsidian ring-2 ring-champagne ring-offset-1 cursor-pointer"></span>
+                            <span class="w-3.5 h-3.5 rounded-full bg-amber-900 cursor-pointer"></span>
+                            <span class="w-3.5 h-3.5 rounded-full bg-slate-400 cursor-pointer"></span>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+                            <span class="text-lg font-bold text-obsidian">$240</span>
+                            <button onclick="quickAddToCart('Vinca Vantage Titanium', 240)" class="text-xs font-semibold text-champagne-dark hover:text-obsidian flex items-center gap-1">
+                                Quick Add <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card frame-optical bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div class="relative p-6 bg-pearl-muted flex items-center justify-center h-56 overflow-hidden">
+                        <span class="absolute top-3 left-3 bg-emerald-accent text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Popular</span>
+                        <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-slate-400 hover:text-red-500 flex items-center justify-center transition-colors">
+                            <i class="fa-regular fa-heart text-xs"></i>
+                        </button>
+                        <svg class="w-48 h-32 text-amber-950 group-hover:scale-110 transition-transform duration-500" viewBox="0 0 500 220" fill="none">
+                            <path d="M220 90 Q250 80 280 90" stroke="#0F172A" stroke-width="5" fill="none"/>
+                            <circle cx="130" cy="105" r="50" stroke="#78350F" stroke-width="12" fill="none"/>
+                            <circle cx="370" cy="105" r="50" stroke="#78350F" stroke-width="12" fill="none"/>
+                            <path d="M80 80 L20 70" stroke="#78350F" stroke-width="6"/>
+                            <path d="M420 80 L480 70" stroke="#78350F" stroke-width="6"/>
+                        </svg>
+                        <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button onclick="openPrescriptionModal('Celeste Round Acetate', 195)" class="bg-obsidian hover:bg-champagne text-pearl hover:text-obsidian text-xs font-semibold px-4 py-2 rounded-lg transition-colors shadow-md flex items-center gap-1.5">
+                                <i class="fa-solid fa-file-medical text-[10px]"></i> Add Prescription
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-1 text-champagne text-xs mb-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-slate-400 text-[10px] ml-1">(52)</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-obsidian text-lg">Celeste Round</h3>
+                        <p class="text-xs text-slate-500 mt-0.5">Hand-polished Tortoise Shell</p>
+                        
+                        <!-- Color Swatches -->
+                        <div class="flex items-center gap-2 my-3">
+                            <span class="w-3.5 h-3.5 rounded-full bg-amber-900 ring-2 ring-champagne ring-offset-1 cursor-pointer"></span>
+                            <span class="w-3.5 h-3.5 rounded-full bg-obsidian cursor-pointer"></span>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+                            <span class="text-lg font-bold text-obsidian">$195</span>
+                            <button onclick="quickAddToCart('Celeste Round Acetate', 195)" class="text-xs font-semibold text-champagne-dark hover:text-obsidian flex items-center gap-1">
+                                Quick Add <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card frame-sunglasses bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div class="relative p-6 bg-pearl-muted flex items-center justify-center h-56 overflow-hidden">
+                        <span class="absolute top-3 left-3 bg-champagne text-obsidian text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Polarized</span>
+                        <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-slate-400 hover:text-red-500 flex items-center justify-center transition-colors">
+                            <i class="fa-regular fa-heart text-xs"></i>
+                        </button>
+                        <svg class="w-48 h-32 text-obsidian group-hover:scale-110 transition-transform duration-500" viewBox="0 0 500 220" fill="none">
+                            <path d="M220 90 Q250 80 280 90" stroke="#D4AF37" stroke-width="5" fill="none"/>
+                            <rect x="60" y="55" width="150" height="100" rx="20" stroke="#0F172A" stroke-width="12" fill="#0F172A"/>
+                            <rect x="290" y="55" width="150" height="100" rx="20" stroke="#0F172A" stroke-width="12" fill="#0F172A"/>
+                            <path d="M60 75 L10 65" stroke="#0F172A" stroke-width="8"/>
+                            <path d="M440 75 L490 65" stroke="#0F172A" stroke-width="8"/>
+                        </svg>
+                        <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button onclick="openPrescriptionModal('Monarch Aviator Polarized', 210)" class="bg-obsidian hover:bg-champagne text-pearl hover:text-obsidian text-xs font-semibold px-4 py-2 rounded-lg transition-colors shadow-md flex items-center gap-1.5">
+                                <i class="fa-solid fa-file-medical text-[10px]"></i> Add Prescription
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-1 text-champagne text-xs mb-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-slate-400 text-[10px] ml-1">(24)</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-obsidian text-lg">Monarch Aviator</h3>
+                        <p class="text-xs text-slate-500 mt-0.5">Dark Tinted UV400 Protection</p>
+                        
+                        <!-- Color Swatches -->
+                        <div class="flex items-center gap-2 my-3">
+                            <span class="w-3.5 h-3.5 rounded-full bg-obsidian ring-2 ring-champagne ring-offset-1 cursor-pointer"></span>
+                            <span class="w-3.5 h-3.5 rounded-full bg-yellow-700 cursor-pointer"></span>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+                            <span class="text-lg font-bold text-obsidian">$210</span>
+                            <button onclick="quickAddToCart('Monarch Aviator Polarized', 210)" class="text-xs font-semibold text-champagne-dark hover:text-obsidian flex items-center gap-1">
+                                Quick Add <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card frame-optical frame-titanium bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+                    <div class="relative p-6 bg-pearl-muted flex items-center justify-center h-56 overflow-hidden">
+                        <span class="absolute top-3 left-3 bg-slate-200 text-obsidian text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Minimalist</span>
+                        <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-slate-400 hover:text-red-500 flex items-center justify-center transition-colors">
+                            <i class="fa-regular fa-heart text-xs"></i>
+                        </button>
+                        <svg class="w-48 h-32 text-slate-400 group-hover:scale-110 transition-transform duration-500" viewBox="0 0 500 220" fill="none">
+                            <path d="M220 90 Q250 80 280 90" stroke="#0F172A" stroke-width="4" fill="none"/>
+                            <rect x="60" y="55" width="150" height="100" rx="10" stroke="#94A3B8" stroke-width="4" fill="none"/>
+                            <rect x="290" y="55" width="150" height="100" rx="10" stroke="#94A3B8" stroke-width="4" fill="none"/>
+                            <path d="M60 80 L10 70" stroke="#94A3B8" stroke-width="4"/>
+                            <path d="M440 80 L490 70" stroke="#94A3B8" stroke-width="4"/>
+                        </svg>
+                        <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button onclick="openPrescriptionModal('Kyoto Wireframe Titanium', 260)" class="bg-obsidian hover:bg-champagne text-pearl hover:text-obsidian text-xs font-semibold px-4 py-2 rounded-lg transition-colors shadow-md flex items-center gap-1.5">
+                                <i class="fa-solid fa-file-medical text-[10px]"></i> Add Prescription
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-1 text-champagne text-xs mb-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-slate-400 text-[10px] ml-1">(19)</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-obsidian text-lg">Kyoto Wireframe</h3>
+                        <p class="text-xs text-slate-500 mt-0.5">Featherlight Japanese Wire</p>
+                        
+                        <!-- Color Swatches -->
+                        <div class="flex items-center gap-2 my-3">
+                            <span class="w-3.5 h-3.5 rounded-full bg-slate-300 ring-2 ring-champagne ring-offset-1 cursor-pointer"></span>
+                            <span class="w-3.5 h-3.5 rounded-full bg-yellow-600 cursor-pointer"></span>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+                            <span class="text-lg font-bold text-obsidian">$260</span>
+                            <button onclick="quickAddToCart('Kyoto Wireframe Titanium', 260)" class="text-xs font-semibold text-champagne-dark hover:text-obsidian flex items-center gap-1">
+                                Quick Add <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="prescription-guide" class="py-20 bg-obsidian text-pearl relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-champagne/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold text-champagne uppercase tracking-widest">Seamless Digital Optical Care</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2">How Online Prescription Works</h2>
+                <p class="text-slate-400 text-sm mt-3 font-light">Ordering custom prescription glasses online has never been this accurate or straightforward.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                
+                <!-- Step 1 -->
+                <div class="bg-obsidian-light p-8 rounded-2xl border border-slate-800 relative group hover:border-champagne/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-champagne/10 text-champagne flex items-center justify-center font-bold text-lg mb-6 group-hover:scale-110 transition-transform">
+                        01
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-pearl mb-2">Select Your Frame</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Choose from our handcrafted Italian acetate or ultra-light titanium frame lineup.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-obsidian-light p-8 rounded-2xl border border-slate-800 relative group hover:border-champagne/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-champagne/10 text-champagne flex items-center justify-center font-bold text-lg mb-6 group-hover:scale-110 transition-transform">
+                        02
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-pearl mb-2">Select Lens Type</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Choose Single Vision, Progressive, Reading, or Non-Prescription Blue Light Filtering lenses.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-obsidian-light p-8 rounded-2xl border border-slate-800 relative group hover:border-champagne/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-champagne/10 text-champagne flex items-center justify-center font-bold text-lg mb-6 group-hover:scale-110 transition-transform">
+                        03
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-pearl mb-2">Input SPH & CYL Specs</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Enter your eye report numbers manually or upload a clear photo/PDF of your doctor's script.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-obsidian-light p-8 rounded-2xl border border-slate-800 relative group hover:border-champagne/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-champagne/10 text-champagne flex items-center justify-center font-bold text-lg mb-6 group-hover:scale-110 transition-transform">
+                        04
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-pearl mb-2">Lab Fitting & Delivery</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Our in-house master opticians cut and fit your lenses with precision before express shipping.</p>
+                </div>
+
+            </div>
+
+            <!-- Banner CTA inside Workflow -->
+            <div class="mt-12 bg-gradient-to-r from-obsidian-light via-slate-900 to-obsidian-light p-8 rounded-2xl border border-champagne/30 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4 text-left">
+                    <div class="w-12 h-12 rounded-full bg-champagne text-obsidian flex items-center justify-center text-xl flex-shrink-0">
+                        <i class="fa-solid fa-file-medical"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-lg text-pearl">Have your eye script ready?</h4>
+                        <p class="text-slate-400 text-xs">Upload directly at checkout or send it via email after placing your frame order.</p>
+                    </div>
+                </div>
+                <button onclick="openPrescriptionModal('Custom Frame Order', 200)" class="bg-champagne hover:bg-champagne-dark text-obsidian font-bold px-6 py-3 rounded-xl text-xs transition-all whitespace-nowrap">
+                    Upload & Order Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="pos-store" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-champagne/10 text-champagne-dark px-3.5 py-1.5 rounded-full text-xs font-semibold">
+                        <i class="fa-solid fa-store"></i> Physical Boutique & Optical Lab
+                    </div>
+
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-obsidian leading-tight">
+                        Visit Our Flagship Store <br>
+                        & In-House Optical Fitting Center
+                    </h2>
+
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Experience our full optical fitting service in person. Our shop is equipped with an integrated POS & instant counter billing system, computerized eye examination lab, and frame styling experts.
+                    </p>
+
+                    <!-- Features List -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-pearl-muted text-champagne-dark flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-user-doctor"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-obsidian text-xs">Resident Optometrist</h4>
+                                <p class="text-slate-500 text-[11px]">Free eye exams with frame purchases.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-pearl-muted text-champagne-dark flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-obsidian text-xs">30-Minute Glass Fitting</h4>
+                                <p class="text-slate-500 text-[11px]">Instant lab cutting & counter billing.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-pearl-muted text-champagne-dark flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-receipt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-obsidian text-xs">Unified Account Billing</h4>
+                                <p class="text-slate-500 text-[11px]">Access in-store invoices on your account.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-pearl-muted text-champagne-dark flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-glasses"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-obsidian text-xs">Free Adjustments</h4>
+                                <p class="text-slate-500 text-[11px]">Lifetime frame cleaning & nose pad swaps.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex flex-wrap items-center gap-4">
+                        <button onclick="toggleAppointmentModal()" class="bg-obsidian hover:bg-obsidian-light text-pearl px-6 py-3.5 rounded-xl text-xs font-semibold transition-all shadow-md">
+                            Schedule In-Store Visit
+                        </button>
+                        <a href="https://maps.google.com" target="_blank" class="text-xs font-semibold text-obsidian hover:text-champagne transition-colors flex items-center gap-2 border border-slate-200 px-5 py-3.5 rounded-xl">
+                            <i class="fa-solid fa-location-arrow text-champagne-dark"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Google My Business (GMB) Interactive Card Mockup -->
+                <div class="lg:col-span-6">
+                    <div class="bg-pearl-muted p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl relative">
+                        <!-- GMB Header -->
+                        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 mb-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <h3 class="font-serif font-bold text-obsidian text-lg">Vinca Eye Wear Boutique</h3>
+                                        <i class="fa-solid fa-circle-check text-blue-500 text-xs"></i>
+                                    </div>
+                                    <p class="text-xs text-slate-500">Optical Shop & Eye Testing Lab</p>
+                                </div>
+                                <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-1 rounded-full">Open Today</span>
+                            </div>
+
+                            <div class="flex items-center gap-2 mt-3 text-xs">
+                                <span class="font-bold text-slate-800">4.9</span>
+                                <div class="text-amber-400 text-xs">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="text-slate-400 text-[11px]">(184 Google Reviews)</span>
+                            </div>
+                        </div>
+
+                        <!-- Store Hours & Info Grid -->
+                        <div class="space-y-3 text-xs">
+                            <div class="flex items-center gap-3 text-slate-600 bg-white p-3 rounded-xl">
+                                <i class="fa-solid fa-location-dot text-champagne-dark w-4 text-center"></i>
+                                <span>742 Evergreen Terrace, Suite 100, Financial District</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 text-slate-600 bg-white p-3 rounded-xl">
+                                <i class="fa-solid fa-clock text-champagne-dark w-4 text-center"></i>
+                                <span>Mon - Sat: 10:00 AM - 8:00 PM | Sun: 12:00 PM - 5:00 PM</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 text-slate-600 bg-white p-3 rounded-xl">
+                                <i class="fa-solid fa-phone text-champagne-dark w-4 text-center"></i>
+                                <span>+1 (800) 458-9234 / Store Ext. 2</span>
+                            </div>
+                        </div>
+
+                        <!-- Mini Map Visual Container -->
+                        <div class="mt-6 h-40 rounded-2xl overflow-hidden bg-slate-200 relative border border-slate-300 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:16px_16px] opacity-70"></div>
+                            <div class="relative z-10 text-center p-4">
+                                <div class="w-10 h-10 rounded-full bg-obsidian text-champagne flex items-center justify-center mx-auto mb-2 shadow-lg animate-bounce">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <span class="bg-white/90 backdrop-blur-sm text-obsidian font-bold text-xs px-3 py-1 rounded-full shadow-sm">
+                                    Vinca Flagship Boutique
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-pearl-muted border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold text-champagne-dark uppercase tracking-widest">Client Testimonials</span>
+                <h2 class="font-serif text-3xl font-bold text-obsidian mt-1">Verified Eye Care Reviews</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-champagne text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-xs leading-relaxed italic">
+                            "The prescription accuracy on my progressive lenses is spot on. I ordered online and picked them up at their physical store. Their in-house billing system had my invoice synced instantly."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-obsidian text-pearl font-bold text-xs flex items-center justify-center">
+                            HA
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-obsidian text-xs">Hassan Ahmed</h4>
+                            <p class="text-[10px] text-slate-400">Verified Buyer • Vinca Vantage</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-champagne text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-xs leading-relaxed italic">
+                            "The Japanese titanium wireframe glasses are so light I literally forget I’m wearing them. Fantastic blue light blocking filter for screen work."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-champagne text-obsidian font-bold text-xs flex items-center justify-center">
+                            SK
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-obsidian text-xs">Sophia Khan</h4>
+                            <p class="text-[10px] text-slate-400">Verified Buyer • Kyoto Wireframe</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-champagne text-xs mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 text-xs leading-relaxed italic">
+                            "Visited their boutique store for an eye test and ordered custom prescription sunglasses. Super smooth transaction and top-tier packaging!"
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-emerald-accent text-white font-bold text-xs flex items-center justify-center">
+                            MR
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-obsidian text-xs">Marcus Rehman</h4>
+                            <p class="text-[10px] text-slate-400">In-Store Visit • Monarch Aviator</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="about" class="bg-obsidian text-pearl pt-16 pb-12 border-t border-champagne/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-champagne text-obsidian flex items-center justify-center font-serif font-bold text-lg">
+                            V
+                        </div>
+                        <span class="font-serif text-2xl font-bold tracking-tight text-pearl">VINCA EYE WEAR</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+                        Crafting high-precision prescription eyewear and luxury frames. Built for seamless online shopping and in-store optical boutique care.
+                    </p>
+                    <div class="flex items-center space-x-3 text-slate-400 pt-2">
+                        <a href="#" class="w-8 h-8 rounded-full bg-obsidian-light hover:bg-champagne hover:text-obsidian flex items-center justify-center transition-colors text-xs"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-obsidian-light hover:bg-champagne hover:text-obsidian flex items-center justify-center transition-colors text-xs"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-obsidian-light hover:bg-champagne hover:text-obsidian flex items-center justify-center transition-colors text-xs"><i class="fa-brands fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-serif font-bold text-pearl text-sm mb-4">Collections</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="#eyeglasses" class="hover:text-champagne transition-colors">Optical Frames</a></li>
+                        <li><a href="#sunglasses" class="hover:text-champagne transition-colors">Polarized Sunglasses</a></li>
+                        <li><a href="#eyeglasses" class="hover:text-champagne transition-colors">Japanese Titanium</a></li>
+                        <li><a href="#eyeglasses" class="hover:text-champagne transition-colors">Blue Light Glasses</a></li>
+                        <li><a href="#eyeglasses" class="hover:text-champagne transition-colors">Reading Glasses</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Optical Help -->
+                <div>
+                    <h4 class="font-serif font-bold text-pearl text-sm mb-4">Prescription Help</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="#prescription-guide" class="hover:text-champagne transition-colors">Understanding SPH/CYL</a></li>
+                        <li><a href="#prescription-guide" class="hover:text-champagne transition-colors">Measuring Pupillary Distance (PD)</a></li>
+                        <li><a href="#pos-store" class="hover:text-champagne transition-colors">In-Store Eye Test Booking</a></li>
+                        <li><a href="#" class="hover:text-champagne transition-colors">Lens Thickness Guide</a></li>
+                        <li><a href="#" class="hover:text-champagne transition-colors">Warranty & Accuracy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div>
+                    <h4 class="font-serif font-bold text-pearl text-sm mb-4">Stay Connected</h4>
+                    <p class="text-xs text-slate-400 mb-3">Subscribe for new frame drops and exclusive optical care guides.</p>
+                    <div class="space-y-2">
+                        <input type="email" placeholder="Enter your email" class="w-full bg-obsidian-light border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-pearl focus:outline-none focus:border-champagne">
+                        <button class="w-full bg-champagne hover:bg-champagne-dark text-obsidian font-bold py-2.5 rounded-xl text-xs transition-colors">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright & Payments -->
+            <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>© 2026 Vinca Eye Wear Inc. All rights reserved. Powered by WooCommerce & Integrated POS.</p>
+                <div class="flex items-center space-x-4 text-lg text-slate-400">
+                    <i class="fa-brands fa-cc-visa hover:text-pearl transition-colors"></i>
+                    <i class="fa-brands fa-cc-mastercard hover:text-pearl transition-colors"></i>
+                    <i class="fa-brands fa-cc-apple-pay hover:text-pearl transition-colors"></i>
+                    <i class="fa-brands fa-cc-paypal hover:text-pearl transition-colors"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Shopping Cart Drawer Overlay -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-obsidian/60 backdrop-blur-sm transition-opacity" onclick="toggleCartDrawer()"></div>
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col justify-between">
+                
+                <!-- Cart Header -->
+                <div class="p-6 bg-pearl-muted border-b border-slate-200 flex justify-between items-center">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-bag-shopping text-champagne-dark"></i>
+                        <h3 class="font-serif font-bold text-obsidian text-lg">Your Optical Bag</h3>
+                    </div>
+                    <button onclick="toggleCartDrawer()" class="text-slate-400 hover:text-obsidian text-lg">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- Cart Items List -->
+                <div class="p-6 overflow-y-auto space-y-4 flex-1" id="cartItemList">
+                    <!-- Item 1 -->
+                    <div class="flex items-center gap-4 p-3 bg-pearl rounded-xl border border-slate-100 relative">
+                        <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-2 flex-shrink-0">
+                            <i class="fa-solid fa-glasses text-2xl text-obsidian"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-obsidian text-xs" id="cartTitle1">Aurelius Titanium Frame</h4>
+                            <p class="text-[10px] text-slate-500">Single Vision Lenses (+Anti-Glare)</p>
+                            <span class="text-xs font-bold text-obsidian mt-1 block" id="cartPrice1">$220</span>
+                        </div>
+                        <button onclick="removeCartItem(this)" class="text-slate-400 hover:text-red-500 text-xs">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cart Footer & Checkout -->
+                <div class="p-6 border-t border-slate-200 bg-pearl-muted space-y-4">
+                    <div class="flex justify-between items-center text-sm font-bold text-obsidian">
+                        <span>Subtotal</span>
+                        <span id="cartSubtotal">$220.00</span>
+                    </div>
+                    <p class="text-[11px] text-slate-500">Taxes and free prescription fitting included at checkout.</p>
+                    <button onclick="alert('Proceeding to WooCommerce Unified Checkout...')" class="w-full bg-obsidian hover:bg-obsidian-light text-pearl py-3.5 rounded-xl font-bold text-xs transition-all shadow-md flex items-center justify-center gap-2">
+                        <span>Proceed to Checkout</span>
+                        <i class="fa-solid fa-arrow-right text-champagne text-xs"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Prescription Form Modal -->
+    <div id="prescriptionModal" class="fixed inset-0 z-50 overflow-y-auto hidden">
+        <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 transition-opacity bg-obsidian/70 backdrop-blur-sm" onclick="closePrescriptionModal()"></div>
+
+            <div class="inline-block w-full max-w-2xl my-8 overflow-hidden text-left align-middle transition-all transform bg-white rounded-3xl shadow-2xl border border-slate-100">
+                <div class="p-6 sm:p-8">
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-4 mb-6">
+                        <div>
+                            <span class="text-[10px] font-bold text-champagne-dark uppercase">WooCommerce Prescription Customizer</span>
+                            <h3 class="font-serif font-bold text-obsidian text-xl" id="modalFrameTitle">Add Eyesight Specs</h3>
+                        </div>
+                        <button onclick="closePrescriptionModal()" class="text-slate-400 hover:text-obsidian text-lg">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+
+                    <!-- Prescription Form Grid -->
+                    <form onsubmit="submitPrescription(event)" class="space-y-6">
+                        
+                        <!-- Vision Type -->
+                        <div>
+                            <label class="block text-xs font-bold text-obsidian mb-2">1. Select Lens Type</label>
+                            <div class="grid grid-cols-3 gap-3">
+                                <label class="border border-champagne bg-champagne/10 rounded-xl p-3 text-center cursor-pointer text-xs font-semibold text-obsidian block">
+                                    <input type="radio" name="lens_type" value="single" checked class="hidden">
+                                    Single Vision
+                                </label>
+                                <label class="border border-slate-200 hover:border-champagne rounded-xl p-3 text-center cursor-pointer text-xs font-semibold text-obsidian block">
+                                    <input type="radio" name="lens_type" value="progressive" class="hidden">
+                                    Progressive (+ $40)
+                                </label>
+                                <label class="border border-slate-200 hover:border-champagne rounded-xl p-3 text-center cursor-pointer text-xs font-semibold text-obsidian block">
+                                    <input type="radio" name="lens_type" value="reading" class="hidden">
+                                    Reading (+ $15)
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Manual Eye Matrix -->
+                        <div>
+                            <label class="block text-xs font-bold text-obsidian mb-2">2. Enter SPH, CYL & AXIS (Eyesight Data)</label>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-xs text-left border-collapse">
+                                    <thead>
+                                        <tr class="bg-pearl-muted text-slate-600">
+                                            <th class="p-2 rounded-l-lg">Eye</th>
+                                            <th class="p-2">Sphere (SPH)</th>
+                                            <th class="p-2">Cylinder (CYL)</th>
+                                            <th class="p-2">Axis</th>
+                                            <th class="p-2 rounded-r-lg">ADD</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100">
+                                        <tr>
+                                            <td class="p-2 font-bold text-obsidian">Right (OD)</td>
+                                            <td class="p-2"><input type="text" placeholder="-1.25" class="w-full bg-pearl border border-slate-200 rounded p-1.5 text-xs"></td>
+                                            <td class="p-2"><input type="text" placeholder="-0.50" class="w-full bg-pearl border border-slate-200 rounded p-1.5 text-xs"></td>
+                                            <td class="p-2"><input type="text" placeholder="180" class="w-full bg-pearl border border-slate-200 rounded p-1.5 text-xs"></td>
+                                            <td class="p-2"><input type="text" placeholder="+1.00" class="w-full bg-pearl border border-slate-200 rounded p-1.5 text-xs"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-2 font-bold text-obsidian">Left (OS)</td>
+                                            <td class="p-2"><input type="text" placeholder="-1.50" class="w-full bg-pearl border border-slate-200 rounded p-1.5 text-xs"></td>
+                                            <td class="p-2"><input type="text" placeholder="-0.25" class="w-full bg-pearl border border-slate-200 rounded p-1.5 text-xs"></td>
+                                            <td class="p-2"><input type="text" placeholder="175" class="w-full bg-pearl border border-slate-200 rounded p-1.5 text-xs"></td>
+                                            <td class="p-2"><input type="text" placeholder="+1.00" class="w-full bg-pearl border border-slate-200 rounded p-1.5 text-xs"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Upload Photo Option -->
+                        <div>
+                            <label class="block text-xs font-bold text-obsidian mb-1">OR Upload Prescription File (Image/PDF)</label>
+                            <input type="file" class="w-full text-xs text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-pearl-muted file:text-obsidian hover:file:bg-champagne">
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400">Calculated Total</span>
+                                <p class="text-xl font-bold text-obsidian" id="modalTotalPrice">$220</p>
+                            </div>
+                            <button type="submit" class="bg-obsidian hover:bg-champagne text-pearl hover:text-obsidian font-bold px-6 py-3 rounded-xl text-xs transition-colors shadow-md">
+                                Confirm & Add To Order
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointment Modal -->
+    <div id="appointmentModal" class="fixed inset-0 z-50 overflow-y-auto hidden">
+        <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 transition-opacity bg-obsidian/70 backdrop-blur-sm" onclick="toggleAppointmentModal()"></div>
+
+            <div class="inline-block w-full max-w-md my-8 overflow-hidden text-left align-middle transition-all transform bg-white rounded-3xl shadow-2xl border border-slate-100">
+                <div class="p-6">
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-3 mb-4">
+                        <h3 class="font-serif font-bold text-obsidian text-lg">Book In-Store Eye Exam</h3>
+                        <button onclick="toggleAppointmentModal()" class="text-slate-400 hover:text-obsidian text-lg">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+
+                    <form onsubmit="alert('Appointment Scheduled! We look forward to seeing you.'); toggleAppointmentModal(); return false;" class="space-y-4 text-xs">
+                        <div>
+                            <label class="block font-bold text-obsidian mb-1">Full Name</label>
+                            <input type="text" required placeholder="John Doe" class="w-full bg-pearl border border-slate-200 rounded-xl p-2.5">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-obsidian mb-1">Phone Number</label>
+                            <input type="tel" required placeholder="+1 (555) 000-0000" class="w-full bg-pearl border border-slate-200 rounded-xl p-2.5">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-obsidian mb-1">Preferred Date & Time</label>
+                            <input type="datetime-local" required class="w-full bg-pearl border border-slate-200 rounded-xl p-2.5">
+                        </div>
+                        <button type="submit" class="w-full bg-champagne hover:bg-champagne-dark text-obsidian font-bold py-3 rounded-xl transition-all shadow-md mt-2">
+                            Confirm Appointment
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // State variables
+        let cartCount = 1;
+        let activeModalFrame = { title: '', price: 200 };
+
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Toggle Cart Drawer
+        function toggleCartDrawer() {
+            const drawer = document.getElementById('cartDrawer');
+            drawer.classList.toggle('hidden');
+        }
+
+        // Toggle Appointment Modal
+        function toggleAppointmentModal() {
+            const modal = document.getElementById('appointmentModal');
+            modal.classList.toggle('hidden');
+        }
+
+        // Open Prescription Modal
+        function openPrescriptionModal(title, price) {
+            activeModalFrame = { title, price };
+            document.getElementById('modalFrameTitle').innerText = title;
+            document.getElementById('modalTotalPrice').innerText = '$' + price;
+            document.getElementById('prescriptionModal').classList.remove('hidden');
+        }
+
+        // Close Prescription Modal
+        function closePrescriptionModal() {
+            document.getElementById('prescriptionModal').classList.add('hidden');
+        }
+
+        // Quick Add to Cart
+        function quickAddToCart(title, price) {
+            cartCount++;
+            document.getElementById('cartCount').innerText = cartCount;
+            
+            const itemList = document.getElementById('cartItemList');
+            const newItem = document.createElement('div');
+            newItem.className = "flex items-center gap-4 p-3 bg-pearl rounded-xl border border-slate-100 relative";
+            newItem.innerHTML = `
+                <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-2 flex-shrink-0">
+                    <i class="fa-solid fa-glasses text-2xl text-obsidian"></i>
+                </div>
+                <div class="flex-1">
+                    <h4 class="font-bold text-obsidian text-xs">${title}</h4>
+                    <p class="text-[10px] text-slate-500">Frame Only</p>
+                    <span class="text-xs font-bold text-obsidian mt-1 block">$${price}</span>
+                </div>
+                <button onclick="removeCartItem(this)" class="text-slate-400 hover:text-red-500 text-xs">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+            `;
+            itemList.appendChild(newItem);
+            toggleCartDrawer();
+        }
+
+        // Remove item from cart
+        function removeCartItem(btn) {
+            btn.parentElement.remove();
+            cartCount = Math.max(0, cartCount - 1);
+            document.getElementById('cartCount').innerText = cartCount;
+        }
+
+        // Filter Frame Products
+        function filterFrames(category) {
+            const cards = document.querySelectorAll('.product-card');
+            const btns = document.querySelectorAll('.filter-btn');
+
+            btns.forEach(btn => {
+                btn.classList.remove('bg-obsidian', 'text-pearl');
+                btn.classList.add('bg-white', 'text-obsidian');
+            });
+
+            event.target.classList.remove('bg-white', 'text-obsidian');
+            event.target.classList.add('bg-obsidian', 'text-pearl');
+
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'flex';
+                } else {
+                    if (card.classList.contains(`frame-${category}`)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // Hero Lens Price Calculation
+        function updateHeroPrice() {
+            const lensVal = parseInt(document.getElementById('heroLensType').value);
+            const coatVal = parseInt(document.getElementById('heroCoat').value);
+            const total = 220 + lensVal + coatVal;
+            // Visual feedback
+        }
+
+        function quickAddHeroFrame() {
+            const lensVal = parseInt(document.getElementById('heroLensType').value);
+            const coatVal = parseInt(document.getElementById('heroCoat').value);
+            const total = 220 + lensVal + coatVal;
+            quickAddToCart('Aurelius Titanium + Custom Lens', total);
+        }
+
+        function submitPrescription(e) {
+            e.preventDefault();
+            quickAddToCart(activeModalFrame.title + ' (With Script Specs)', activeModalFrame.price);
+            closePrescriptionModal();
+        }
+    </script>
+</body>
+</html>
