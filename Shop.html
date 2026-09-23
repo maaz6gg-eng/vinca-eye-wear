@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Collection | Vinca Eye Wear</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: {
+                            DEFAULT: '#0F172A',
+                            light: '#1E293B',
+                            dark: '#080D1A'
+                        },
+                        champagne: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#B89420',
+                            accent: '#E2C044'
+                        },
+                        pearl: {
+                            DEFAULT: '#F8FAFC',
+                            muted: '#F1F5F9',
+                            dark: '#E2E8F0'
+                        },
+                        emerald: {
+                            accent: '#059669'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(15, 23, 42, 0.08)',
+                        'champagne-glow': '0 0 25px rgba(212, 175, 55, 0.25)',
+                        'card-hover': '0 20px 40px -15px rgba(15, 23, 42, 0.12)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glass-header {
+            background: rgba(248, 250, 252, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F8FAFC;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="font-sans bg-pearl text-obsidian overflow-x-hidden">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-obsidian text-pearl-muted text-xs py-2.5 px-4 font-medium border-b border-champagne/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="hidden sm:flex items-center space-x-6">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-truck-fast text-champagne"></i> Free Shipping Worldwide</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-champagne"></i> 100% Prescription Accuracy Guarantee</span>
+            </div>
+            <div class="flex items-center justify-between w-full sm:w-auto space-x-6">
+                <span class="text-champagne-light font-semibold animate-pulse"><i class="fa-solid fa-location-dot mr-1"></i> Visit In-Store POS & Lab</span>
+                <button onclick="toggleAppointmentModal()" class="text-xs text-pearl hover:text-champagne transition-colors underline underline-offset-4">Book Eye Exam</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="sticky top-0 z-40 glass-header transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="group flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-obsidian text-champagne flex items-center justify-center font-serif font-bold text-xl shadow-md group-hover:scale-105 transition-transform duration-300 border border-champagne/30">
+                            V
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif text-2xl font-bold tracking-tight text-obsidian group-hover:text-champagne transition-colors">VINCA</span>
+                            <span class="text-[9px] tracking-[0.25em] text-champagne-dark font-semibold uppercase -mt-1">EYE WEAR</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-obsidian hover:text-champagne transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-champagne hover:after:w-full after:transition-all">Home</a>
+                    <a href="Shop.html" class="text-sm font-medium text-obsidian hover:text-champagne transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-champagne hover:after:w-full after:transition-all">Shop</a>
+                    <a href="#" class="text-sm font-medium text-obsidian hover:text-champagne transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-champagne hover:after:w-full after:transition-all">Single Products</a>
+                </nav>
+
+                <!-- Search & Actions -->
+                <div class="flex items-center space-x-5">
+                    <div class="relative hidden sm:block">
+                        <input type="text" placeholder="Search frames, materials..." class="bg-white text-obsidian text-xs rounded-full py-2.5 pl-9 pr-4 w-48 focus:w-64 focus:outline-none focus:ring-1 focus:ring-champagne transition-all duration-300 border border-slate-200">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400 text-xs"></i>
+                    </div>
+
+                    <button class="text-obsidian hover:text-champagne transition-colors relative p-1">
+                        <i class="fa-regular fa-heart text-lg"></i>
+                        <span class="absolute -top-1 -right-1 bg-champagne text-obsidian text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">3</span>
+                    </button>
+
+                    <button onclick="toggleCartDrawer()" class="text-obsidian hover:text-champagne transition-colors relative p-1 flex items-center gap-2">
+                        <i class="fa-solid fa-bag-shopping text-lg"></i>
+                        <span class="bg-obsidian text-champagne text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center border border-champagne/30" id="cartCount">1</span>
+                    </button>
+
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-obsidian text-xl p-2 focus:outline-none">
+                        <i class="fa-solid fa-bars" id="menuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-pearl border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="text-sm font-medium text-obsidian hover:text-champagne transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-champagne hover:after:w-full after:transition-all">Home</a>
+            <a href="Shop.html" class="text-sm font-medium text-obsidian hover:text-champagne transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-champagne hover:after:w-full after:transition-all">Shop</a>
+            <a href="#" class="text-sm font-medium text-obsidian hover:text-champagne transition-colors py-2 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-champagne hover:after:w-full after:transition-all">Single Products</a>
+        <div class="pt-4 border-t border-slate-200 flex flex-col gap-2">
+                <button onclick="toggleAppointmentModal()" class="w-full bg-obsidian text-pearl py-2.5 rounded-xl text-sm font-semibold">Book Eye Exam</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shop Hero Header -->
+    <section class="bg-gradient-to-b from-pearl-muted via-pearl to-white py-12 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 bg-white border border-champagne/40 px-3.5 py-1.5 rounded-full text-xs font-semibold text-obsidian mb-4 shadow-sm">
+                <i class="fa-solid fa-glasses text-champagne"></i>
+                <span>Complete Optical Catalog</span>
+            </div>
+            <h1 class="font-serif text-3xl sm:text-5xl font-bold text-obsidian tracking-tight">Prescription Eyewear & Luxury Frames</h1>
+            <p class="text-slate-600 text-sm max-w-2xl mx-auto mt-3">Handcrafted Japanese titanium, Italian acetate, and precision optical lenses tailored to your prescription.</p>
+        </div>
+    </section>
+
+    <!-- Main Shop Layout -->
+    <section id="shop" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Sidebar Filters (3 Cols) -->
+                <div class="lg:col-span-3 space-y-6">
+                    <div class="bg-pearl-muted p-6 rounded-2xl border border-slate-200 sticky top-28 space-y-6 shadow-sm">
+                        
+                        <div class="flex items-center justify-between border-b border-slate-200 pb-4">
+                            <h3 class="font-serif font-bold text-obsidian text-base flex items-center gap-2">
+                                <i class="fa-solid fa-sliders text-champagne-dark"></i> Filter Frames
+                            </h3>
+                            <button onclick="resetFilters()" class="text-[11px] text-slate-500 hover:text-champagne transition-colors underline">Reset All</button>
+                        </div>
+
+                        <!-- Category Filter -->
+                        <div>
+                            <h4 class="font-bold text-obsidian text-xs uppercase tracking-wider mb-3">Frame Type</h4>
+                            <div class="space-y-2 text-xs text-slate-700">
+                                <label class="flex items-center justify-between cursor-pointer hover:text-obsidian">
+                                    <span class="flex items-center gap-2"><input type="checkbox" checked class="rounded border-slate-300 text-obsidian focus:ring-champagne"> Optical Glasses</span>
+                                    <span class="text-slate-400 text-[10px]">(64)</span>
+                                </label>
+                                <label class="flex items-center justify-between cursor-pointer hover:text-obsidian">
+                                    <span class="flex items-center gap-2"><input type="checkbox" checked class="rounded border-slate-300 text-obsidian focus:ring-champagne"> Polarized Sunglasses</span>
+                                    <span class="text-slate-400 text-[10px]">(32)</span>
+                                </label>
+                                <label class="flex items-center justify-between cursor-pointer hover:text-obsidian">
+                                    <span class="flex items-center gap-2"><input type="checkbox" class="rounded border-slate-300 text-obsidian focus:ring-champagne"> Blue Light Shield</span>
+                                    <span class="text-slate-400 text-[10px]">(28)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Frame Shape Filter -->
+                        <div>
+                            <h4 class="font-bold text-obsidian text-xs uppercase tracking-wider mb-3">Frame Shape</h4>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <button class="p-2 border border-slate-200 bg-white rounded-xl text-center hover:border-champagne hover:bg-champagne/10 transition-colors font-medium">Square</button>
+                                <button class="p-2 border border-slate-200 bg-white rounded-xl text-center hover:border-champagne hover:bg-champagne/10 transition-colors font-medium">Round</button>
+                                <button class="p-2 border border-slate-200 bg-white rounded-xl text-center hover:border-champagne hover:bg-champagne/10 transition-colors font-medium">Aviator</button>
+                                <button class="p-2 border border-slate-200 bg-white rounded-xl text-center hover:border-champagne hover:bg-champagne/10 transition-colors font-medium">Cat-Eye</button>
+                            </div>
+                        </div>
+
+                        <!-- Material Filter -->
+                        <div>
+                            <h4 class="font-bold text-obsidian text-xs uppercase tracking-wider mb-3">Material</h4>
+                            <div class="space-y-2 text-xs text-slate-700">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="material" class="text-obsidian focus:ring-champagne"> Japanese Titanium
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="material" class="text-obsidian focus:ring-champagne"> Italian Cellulose Acetate
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="material" class="text-obsidian focus:ring-champagne"> Lightweight Stainless Steel
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Price Range -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="font-bold text-obsidian text-xs uppercase tracking-wider">Price Range</h4>
+                                <span class="text-xs font-bold text-champagne-dark" id="priceLabel">$150 - $350</span>
+                            </div>
+                            <input type="range" min="100" max="500" value="350" oninput="document.getElementById('priceLabel').innerText = '$150 - $' + this.value" class="w-full accent-champagne">
+                        </div>
+
+                        <!-- Prescription Compatibility Badge -->
+                        <div class="bg-white p-3 rounded-xl border border-slate-200 text-xs">
+                            <div class="flex items-center gap-2 font-bold text-obsidian mb-1">
+                                <i class="fa-solid fa-file-prescription text-emerald-accent"></i> High-Index Ready
+                            </div>
+                            <p class="text-[11px] text-slate-500">All filtered frames support high cylinder & strong sphere prescriptions.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Product Catalog Grid (9 Cols) -->
+                <div class="lg:col-span-9 space-y-6">
+                    
+                    <!-- Top Sort & View Controls -->
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-pearl-muted p-4 rounded-2xl border border-slate-200">
+                        <span class="text-xs text-slate-600 font-medium">Showing <strong class="text-obsidian">12</strong> of 124 Optical Frames</span>
+                        <div class="flex items-center gap-3 text-xs">
+                            <label class="text-slate-500">Sort By:</label>
+                            <select class="bg-white border border-slate-200 rounded-xl px-3 py-2 font-medium text-obsidian focus:outline-none focus:border-champagne">
+                                <option>Featured & Best Sellers</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Newest Titanium Arrivals</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        
+                        <!-- Product 1 -->
+                        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+                            <div class="relative p-6 bg-pearl-muted flex items-center justify-center h-56 overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-obsidian text-champagne text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Titanium</span>
+                                <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white text-slate-400 hover:text-red-500 flex items-center justify-center transition-colors shadow-sm">
+                                    <i class="fa-regular fa-heart text-xs"></i>
+                                </button>
+                                <svg class="w-48 h-32 text-obsidian group-hover:scale-110 transition-transform duration-500" viewBox="0 0 500 220" fill="none">
+                                    <path d="M220 90 Q250 80 280 90" stroke="#D4AF37" stroke-width="5" fill="none"/>
+                                    <rect x="60" y="55" width="150" height="100" rx="30" stroke="#0F172A" stroke-width="10" fill="none"/>
+                                    <rect x="290" y="55" width="150" height="100" rx="30" stroke="#0F172A" stroke-width="10" fill="none"/>
+                                    <path d="M60 80 L20 70" stroke="#D4AF37" stroke-width="6"/>
+                                    <path d="M440 80 L480 70" stroke="#D4AF37" stroke-width="6"/>
+                                </svg>
+                                <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <button onclick="openPrescriptionModal('Vinca Vantage Titanium', 240)" class="bg-obsidian hover:bg-champagne text-pearl hover:text-obsidian text-xs font-semibold px-4 py-2 rounded-lg transition-colors shadow-md flex items-center gap-1.5">
+                                        <i class="fa-solid fa-file-medical text-[10px]"></i> Add Prescription
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <div class="flex items-center gap-1 text-champagne text-xs mb-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <span class="text-slate-400 text-[10px] ml-1">(38)</span>
+                                </div>
+                                <h3 class="font-serif font-bold text-obsidian text-lg">Vinca Vantage</h3>
+                                <p class="text-xs text-slate-500 mt-0.5">Ultra-light Square Acetate</p>
+                                <div class="flex items-center justify-between pt-3 mt-3 border-t border-slate-100">
+                                    <span class="text-lg font-bold text-obsidian">$240</span>
+                                    <button onclick="quickAddToCart('Vinca Vantage Titanium', 240)" class="text-xs font-semibold text-champagne-dark hover:text-obsidian flex items-center gap-1">
+                                        Quick Add <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+                            <div class="relative p-6 bg-pearl-muted flex items-center justify-center h-56 overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-emerald-accent text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">In Lab Stock</span>
+                                <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white text-slate-400 hover:text-red-500 flex items-center justify-center transition-colors shadow-sm">
+                                    <i class="fa-regular fa-heart text-xs"></i>
+                                </button>
+                                <svg class="w-48 h-32 text-amber-950 group-hover:scale-110 transition-transform duration-500" viewBox="0 0 500 220" fill="none">
+                                    <path d="M220 90 Q250 80 280 90" stroke="#0F172A" stroke-width="5" fill="none"/>
+                                    <circle cx="130" cy="105" r="50" stroke="#78350F" stroke-width="12" fill="none"/>
+                                    <circle cx="370" cy="105" r="50" stroke="#78350F" stroke-width="12" fill="none"/>
+                                </svg>
+                                <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <button onclick="openPrescriptionModal('Celeste Round Acetate', 195)" class="bg-obsidian hover:bg-champagne text-pearl hover:text-obsidian text-xs font-semibold px-4 py-2 rounded-lg transition-colors shadow-md flex items-center gap-1.5">
+                                        <i class="fa-solid fa-file-medical text-[10px]"></i> Add Prescription
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <div class="flex items-center gap-1 text-champagne text-xs mb-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <span class="text-slate-400 text-[10px] ml-1">(52)</span>
+                                </div>
+                                <h3 class="font-serif font-bold text-obsidian text-lg">Celeste Round</h3>
+                                <p class="text-xs text-slate-500 mt-0.5">Hand-polished Tortoise Shell</p>
+                                <div class="flex items-center justify-between pt-3 mt-3 border-t border-slate-100">
+                                    <span class="text-lg font-bold text-obsidian">$195</span>
+                                    <button onclick="quickAddToCart('Celeste Round Acetate', 195)" class="text-xs font-semibold text-champagne-dark hover:text-obsidian flex items-center gap-1">
+                                        Quick Add <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group">
+                            <div class="relative p-6 bg-pearl-muted flex items-center justify-center h-56 overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-champagne text-obsidian text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Polarized</span>
+                                <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white text-slate-400 hover:text-red-500 flex items-center justify-center transition-colors shadow-sm">
+                                    <i class="fa-regular fa-heart text-xs"></i>
+                                </button>
+                                <svg class="w-48 h-32 text-obsidian group-hover:scale-110 transition-transform duration-500" viewBox="0 0 500 220" fill="none">
+                                    <path d="M220 90 Q250 80 280 90" stroke="#D4AF37" stroke-width="5" fill="none"/>
+                                    <rect x="60" y="55" width="150" height="100" rx="20" stroke="#0F172A" stroke-width="12" fill="#0F172A"/>
+                                    <rect x="290" y="55" width="150" height="100" rx="20" stroke="#0F172A" stroke-width="12" fill="#0F172A"/>
+                                </svg>
+                                <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <button onclick="openPrescriptionModal('Monarch Aviator Polarized', 210)" class="bg-obsidian hover:bg-champagne text-pearl hover:text-obsidian text-xs font-semibold px-4 py-2 rounded-lg transition-colors shadow-md flex items-center gap-1.5">
+                                        <i class="fa-solid fa-file-medical text-[10px]"></i> Add Prescription
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <div class="flex items-center gap-1 text-champagne text-xs mb-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                    <span class="text-slate-400 text-[10px] ml-1">(24)</span>
+                                </div>
+                                <h3 class="font-serif font-bold text-obsidian text-lg">Monarch Aviator</h3>
+                                <p class="text-xs text-slate-500 mt-0.5">Dark Tinted UV400 Protection</p>
+                                <div class="flex items-center justify-between pt-3 mt-3 border-t border-slate-100">
+                                    <span class="text-lg font-bold text-obsidian">$210</span>
+                                    <button onclick="quickAddToCart('Monarch Aviator Polarized', 210)" class="text-xs font-semibold text-champagne-dark hover:text-obsidian flex items-center gap-1">
+                                        Quick Add <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="flex items-center justify-center gap-2 pt-8">
+                        <button class="w-9 h-9 rounded-xl bg-obsidian text-pearl font-bold text-xs flex items-center justify-center">1</button>
+                        <button class="w-9 h-9 rounded-xl bg-pearl-muted text-obsidian hover:bg-champagne/20 font-bold text-xs flex items-center justify-center transition-colors">2</button>
+                        <button class="w-9 h-9 rounded-xl bg-pearl-muted text-obsidian hover:bg-champagne/20 font-bold text-xs flex items-center justify-center transition-colors">3</button>
+                        <button class="px-4 h-9 rounded-xl bg-pearl-muted text-obsidian hover:bg-champagne/20 font-bold text-xs flex items-center justify-center transition-colors">Next <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="about" class="bg-obsidian text-pearl pt-16 pb-12 border-t border-champagne/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+                
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-champagne text-obsidian flex items-center justify-center font-serif font-bold text-lg">
+                            V
+                        </div>
+                        <span class="font-serif text-2xl font-bold tracking-tight text-pearl">VINCA EYE WEAR</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+                        Crafting high-precision prescription eyewear and luxury frames. Built for seamless online shopping and in-store optical boutique care.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-pearl text-sm mb-4">Collections</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="#shop" class="hover:text-champagne transition-colors">Optical Frames</a></li>
+                        <li><a href="#shop" class="hover:text-champagne transition-colors">Polarized Sunglasses</a></li>
+                        <li><a href="#shop" class="hover:text-champagne transition-colors">Japanese Titanium</a></li>
+                        <li><a href="#shop" class="hover:text-champagne transition-colors">Blue Light Glasses</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-pearl text-sm mb-4">Prescription Help</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="index.html#prescription-guide" class="hover:text-champagne transition-colors">Understanding SPH/CYL</a></li>
+                        <li><a href="index.html#prescription-guide" class="hover:text-champagne transition-colors">Measuring PD</a></li>
+                        <li><a href="index.html#pos-store" class="hover:text-champagne transition-colors">In-Store Eye Test Booking</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-pearl text-sm mb-4">Newsletter</h4>
+                    <p class="text-xs text-slate-400 mb-3">Subscribe for new frame drops.</p>
+                    <div class="space-y-2">
+                        <input type="email" placeholder="Enter your email" class="w-full bg-obsidian-light border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-pearl focus:outline-none focus:border-champagne">
+                        <button class="w-full bg-champagne hover:bg-champagne-dark text-obsidian font-bold py-2.5 rounded-xl text-xs transition-colors">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>© 2026 Vinca Eye Wear Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-obsidian/60 backdrop-blur-sm transition-opacity" onclick="toggleCartDrawer()"></div>
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col justify-between">
+                <div class="p-6 bg-pearl-muted border-b border-slate-200 flex justify-between items-center">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-bag-shopping text-champagne-dark"></i>
+                        <h3 class="font-serif font-bold text-obsidian text-lg">Your Optical Bag</h3>
+                    </div>
+                    <button onclick="toggleCartDrawer()" class="text-slate-400 hover:text-obsidian text-lg">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div class="p-6 overflow-y-auto space-y-4 flex-1" id="cartItemList">
+                    <div class="flex items-center gap-4 p-3 bg-pearl rounded-xl border border-slate-100 relative">
+                        <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-2 flex-shrink-0">
+                            <i class="fa-solid fa-glasses text-2xl text-obsidian"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-obsidian text-xs">Vinca Vantage Titanium</h4>
+                            <p class="text-[10px] text-slate-500">Single Vision (+Anti-Glare)</p>
+                            <span class="text-xs font-bold text-obsidian mt-1 block">$240</span>
+                        </div>
+                        <button onclick="removeCartItem(this)" class="text-slate-400 hover:text-red-500 text-xs">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="p-6 border-t border-slate-200 bg-pearl-muted space-y-4">
+                    <div class="flex justify-between items-center text-sm font-bold text-obsidian">
+                        <span>Subtotal</span>
+                        <span>$240.00</span>
+                    </div>
+                    <button onclick="alert('Proceeding to Checkout...')" class="w-full bg-obsidian text-pearl py-3.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2">
+                        <span>Proceed to Checkout</span>
+                        <i class="fa-solid fa-arrow-right text-champagne text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Prescription Modal -->
+    <div id="prescriptionModal" class="fixed inset-0 z-50 overflow-y-auto hidden">
+        <div class="flex items-center justify-center min-h-screen px-4">
+            <div class="fixed inset-0 bg-obsidian/70 backdrop-blur-sm" onclick="closePrescriptionModal()"></div>
+            <div class="relative bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 z-10 border border-slate-200 shadow-2xl">
+                <div class="flex justify-between items-center border-b pb-4 mb-4">
+                    <h3 class="font-serif font-bold text-obsidian text-xl" id="modalFrameTitle">Add Prescription</h3>
+                    <button onclick="closePrescriptionModal()" class="text-slate-400 hover:text-obsidian"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <form onsubmit="submitPrescription(event)" class="space-y-4 text-xs">
+                    <div>
+                        <label class="block font-bold text-obsidian mb-1">Right Eye (OD) SPH</label>
+                        <input type="text" placeholder="-1.50" class="w-full bg-pearl border rounded-xl p-2.5">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-obsidian mb-1">Left Eye (OS) SPH</label>
+                        <input type="text" placeholder="-1.25" class="w-full bg-pearl border rounded-xl p-2.5">
+                    </div>
+                    <button type="submit" class="w-full bg-obsidian text-pearl font-bold py-3 rounded-xl">Add To Cart</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let cartCount = 1;
+        let activeModalFrame = { title: '', price: 200 };
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+        function toggleCartDrawer() {
+            document.getElementById('cartDrawer').classList.toggle('hidden');
+        }
+        function openPrescriptionModal(title, price) {
+            activeModalFrame = { title, price };
+            document.getElementById('modalFrameTitle').innerText = title;
+            document.getElementById('prescriptionModal').classList.remove('hidden');
+        }
+        function closePrescriptionModal() {
+            document.getElementById('prescriptionModal').classList.add('hidden');
+        }
+        function quickAddToCart(title, price) {
+            cartCount++;
+            document.getElementById('cartCount').innerText = cartCount;
+            toggleCartDrawer();
+        }
+        function removeCartItem(btn) {
+            btn.parentElement.remove();
+        }
+        function submitPrescription(e) {
+            e.preventDefault();
+            quickAddToCart(activeModalFrame.title, activeModalFrame.price);
+            closePrescriptionModal();
+        }
+        function resetFilters() {
+            alert('Filters Reset');
+        }
+    </script>
+</body>
+</html>
